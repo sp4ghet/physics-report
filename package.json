@@ -1,0 +1,30 @@
+{
+  "name": "physics-report",
+  "version": "0.1.0",
+  "description": "Physics report for UCL UPCSE",
+  "main": "_",
+  "config": {
+    "texpath": "main.tex"
+  },
+  "scripts": {
+    "textlint-check": "cp ${npm_package_config_texpath} output.txt && $(npm bin)/textlint output.txt && { rm output.txt ; exit 0 ; } || { rm output.txt ; exit 1 ; }",
+    "textlint-fix": "cp ${npm_package_config_texpath} output.txt && $(npm bin)/textlint --fix output.txt && cp output.txt ${npm_package_config_texpath} && { rm output.txt ; exit 0 ; } || { rm output.txt ; exit 1 ; }"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sp4ghet/physics-report.git"
+  },
+  "keywords": [
+    "TeX"
+  ],
+  "author": "sp4ghet",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sp4ghet/physics-report/issues"
+  },
+  "homepage": "https://github.com/sp4ghet/physics-report#readme",
+  "devDependencies": {
+    "textlint": "^10.2.1",
+    "textlint-rule-prh": "^5.0.1"
+  }
+}

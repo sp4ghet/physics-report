@@ -1,0 +1,22 @@
+# prh version
+version: 1
+rules:
+    # よくある表記揺れ
+    - expected: "Daedalus"
+      patterns:
+          - "(Tt)his protocol"
+
+    - expected: "Talaria"
+      patterns:
+          - "sensor node"
+
+    # 句読点
+    - expected: ","
+      patterns:
+          - "、"
+          - "，"
+
+    - expected: "\\." # escape
+      patterns:
+          - "。"
+          - "．"
