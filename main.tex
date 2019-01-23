@@ -1,9 +1,9 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
-\usepackage{hyperref}
-\usepackage{graphicx}
-\usepackage{float}
+\usepackage[dvipdfmx]{hyperref}\usepackage{float}
 \usepackage{fancyhdr}
+
+\usepackage[dvipdfmx]{graphicx}
 
 \usepackage{mathtools}
 \renewcommand{\theequation}{eq. \arabic{equation}}
@@ -21,48 +21,133 @@
 \pagestyle{fancy}
 \fancyhf{}
 \rhead{Rikuo Hasegawa}
-\lhead{UPCSE PHYSICS Long Lab Report}
+\chead{UPCSE PHYSICS Long Lab Report}
+\lhead{\today}
 \rfoot{p. \thepage}
 
-\title{Random Article}
-\author{ sp4ghet \\ Tutorial Group: aaa \\ Lab Pair: aaa \\ Lab Partners: aaa,\ aaa }
+\title{Measurement of the Wavelength of a Helium-neon Laser via Interference Patterns in a Reflection Grating Experiment}
+\author{ Rikuo Hasegawa \\ Tutorial Group: C \\ Lab Pair: Mohammed Alsaleh }
 
 \begin{document}
 
 \maketitle
 \thispagestyle{fancy}
+\vspace*{\fill}
+\parbox{\linewidth}{\centering%
+Date of Experiment: January 16, 2019
+\\ Date of Experiment Submission: January --, 2019
+\\ University Preparatory Certificate for Science and Engineering
+}
 \newpage
 
 \section*{Abstract}
-  Random abstract \autocite{Hoge2017}
-  \begin{equation}\label{eqn:euler}
-    e^{i\pi} = -1
-  \end{equation}
-  \eqref{eqn:euler} is euler's formula \\
-  $$ e^{i\theta} = \cos{\theta} + i\sin{\theta}$$
-  is the more general formula
+  The aim of this experiment was to confirm the theory behind interference as light reflects off of a reflection grating and measure the wavelength of a Helium-neon (HeNe) laser. The experiment properly confirmed that our theory properly models the observed phenomenon by comparing the measured wavelength with the known wavelength of a HeNe laser, 632.8 nm \autocite{WikiHeNe}. The wavelength measured by the experiment was
+
+  $$
+  xxx.xx \pm \Delta xx [nm]
+  $$
+
+  In this report, we first introduce the theory of light interference patterns from a reflection grating. Then, we introduce the apparatus used and explain the experiment protocol. This is followed by an analysis of our results. Finally, we will discuss the results and give our conclusion.
 
 \section{Introduction}
-aa
-
-\subsection{Aims and Objectives}
-aa
 
 \subsection{Theory}
-aa
+\paragraph{}
+A coherent light source is a light source in which the light waves from the source are in phase. When light from a coherent light source travels through two separate paths to reach a single point in space, they undergo a phenomenon called interference. This interference can be constructive or destructive. The intensity of light at a point where constructive interference is occuring is the sum of each constructively interfering waves' intensity. On the contrary, the intensity of light due to destructive interference is 0 because in destructive interference, two waves are out of phase and cancel out. The conditions for constructive interference can be expressed as:
+\begin{equation}\label{eq:constructive}
+  |p_1 - p_2| = n \lambda
+\end{equation}
+where $|p_1 - p_2|$ is the difference between the length of the two paths that the light takes, $n$ is some natural number, and $\lambda$ is the wavelength of the light.
 
-\section{Experimental Equipment and Method}
-aa
-
-\subsection{Apparatus}
-aa
+In this experiment, the light is reflected off a specular steel ruler with small diffuse divisions which do not reflect light onto a screen perpendicular to the ruler as seen in Figure \ref{fig:setup}. Each division of the ruler acts as a point source of light, creating an interference pattern on the screen.
 \begin{figure}[H]
-  \includegraphics[width=\linewidth,natwidth=512,natheight=512]{img/hoge.png}
-  \caption{Some Figure}
+  \includegraphics[width=\textwidth]{img/setup.pdf}
+  \caption{The experimental setup \autocite{UPCSE2018}}
+  \label{fig:setup}
 \end{figure}
 
-\subsection{Method and Procedure}
-aa
+In Figure \ref{fig:setup}, each division is spaced by some length $d$. $x$ is the distance from the point where the laser hits the ruler to the screen where we observe the interference pattern. Point $T$ on the diagram is the point where light from pure reflection hits the screen, which also happens to be where the 0th-order peak of the interference pattern shows up. Point $S$ is where the laser would hit the screen if the ruler was not present. Thus, point $O$, the midpoint of $S$ and $T$, is also the height of the ruler projected onto the screen. When we consider the path difference of light waves that are emitted from two consecutive divisions ($PQR$ and $ABC$) as it reaches point $R$ and $C$ respectively, we can express it as in \eqref{eq:path_difference}. We measure the height of each peak of the interference pattern as $y_n$ indicating which order it is. Thus, $|OT|$ is also $y_0$.
+\begin{equation}\label{eq:path_difference}
+  |PQR - ABC| = d(\sin{i}-\sin{\theta})
+\end{equation}
+
+Now, recalling \eqref{eq:constructive} and \eqref{eq:path_difference}, whenever there is constructive interference, we can say that the conditions in \eqref{eq:constructive_path} are satisfied.
+\begin{equation}\label{eq:constructive_path}
+  n\lambda = d(\sin{i} - \sin{\theta})
+\end{equation}
+From Figure \ref{fig:setup} we can see:
+
+\begin{equation}\label{eq:sin_t}
+  \sin{\theta_n} = \cfrac{x}{\sqrt{x^2 + y_{n}^{2}}}
+  = \cfrac{1}{
+      \sqrt{1 + \left( \cfrac{y_n}{x} \right)^2}
+    }
+\end{equation}
+Looking at the Mclaurin expansion in \eqref{eq:mclaurin} we can see that \eqref{eq:sin_t} approximates to \eqref{eq:sin_height}
+
+\begin{equation}\label{eq:mclaurin}
+  \frac{1}{\sqrt{1+z}} \approx 1 - \frac{1}{2}z \quad \text{(for $z\ll 1$)}
+\end{equation}
+
+\begin{equation}\label{eq:sin_height}
+  \sin{\theta_n} = 1 - \cfrac{ y_{n}^{2} }{ 2x^2 } \quad \text{ (for $y_{n}^{2} \ll x$)}
+\end{equation}
+Because we are looking at a pure reflection, we can say that $i = \theta = \theta_0$. Thus, substituting $n=0$ in \eqref{eq:sin_height}, we get:
+
+\begin{equation}\label{eq:sin_i}
+  \sin{i} = 1 - \cfrac{ y_{0}^{2} }{ 2x^2 }
+\end{equation}
+By combining \eqref{eq:constructive_path}, \eqref{eq:sin_height}, and \eqref{eq:sin_i}, we get:
+
+\begin{equation}\label{eq:main}
+  \cfrac{
+    y_{n}^{2} - y_{0}^{2}
+  }{
+    2x^2
+  } d = \lambda n
+\end{equation}
+We will use \eqref{eq:main} to calculate our wavelength as the gradient of the line $\lambda n$.
+
+As the value of $y_{n}^{2} - y_{0}^{2}$ is inversely proportional to the value of $d$ if we fix $x$ and $n$, we can expect the distance between peaks to be larger when the distance between divisions are smaller. Thus, we can expect to see less uncertainty in our measurement of $\lambda$ in the experiment with the smallest $d$ since we will be measuring $y_{n}^{2}$ directly.
+
+\subsection{Aims and Objectives}
+\paragraph{}
+The aim of this experiment was to measure the wavelength of a HeNe laser.  By applying the measurements taken from our experiment setup to the theory, we calculated a measurement for the wavelength of our laser.
+
+Another objective was to confirm how the size between divisions affected the precision of the measurement of the wavelength. By calculating the uncertainty in each experiment, we can conclude which setup led to the most precise results.
+
+\section{Experimental Equipment and Method}
+\subsection{Apparatus}
+
+\paragraph{}
+The experimental setup is shown in Figure \ref{fig:setup}. It consists of a HeNe laser placed at a shallow angle towards a specular ruler with diffuse divisions, placed at a specific distance from a screen perpendicular to the ruler and approximately perpendicular to the laser beam.
+A sheet of paper is taped on the screen in order to measure the results.
+
+
+\subsection{Protocol}
+
+The experimental protocol is described below.
+
+\begin{enumerate}
+  \item Setup the equipment. In our experiment, we set the distance from the ruler to the screen ($x$) at $4.92 \times 10^{-1}$ [m]. We used divisions ($d$) of $5.08 \times 10^{-4}$ [m], $3.97 \times 10^{-4}$ [m], $2.54 \times 10^{-4}$ [m]. (1/50, 1/64, 1/100 inches).
+  \item Main loop:
+    \begin{enumerate}
+      \item Locate point $S$ by moving the ruler to the side so it does not obstruct the laser beam. The point where the beam hits the paper is $S$.
+      \item Locate point $T$ by moving the ruler so the laser beam strikes a completely specular section of the ruler. The point where the beam hits the paper is $T$.
+      \item Locate point $O$ by moving the ruler horizontally towards the paper, making sure the height is unchanged. The height where the top of the ruler hits the paper is the height of $O$. Draw a line between $S$ and $T$ to locate $O$.
+      \item Return the ruler back to the original position where $x$ was measured and shift the ruler along the plane parallel to the table so the beam hits the divisions. There should be an observable interference pattern on the paper along the line $OT$.
+      \item Mark the each observed peak of the interference pattern from $y_0$ 10 times up until $y_9$.
+    \end{enumerate}
+  \item Repeat the previous step for the other 2 division sizes.
+  \item Remove the paper from the screen and measure $y_0, y_1, ..., y_9$.
+  \item Discard measurements where $\frac{y_n}{x} > 0.4$ as the condition for our approximation from \eqref{eq:sin_height} is no longer satisfied in this case.
+\end{enumerate}
+
+
+\section{Measurements and Results}
+\paragraph{}
+
+
 
 \section{Analysis of Results}
 aa
