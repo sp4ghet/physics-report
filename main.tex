@@ -1,7 +1,8 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
-\usepackage[dvipdfmx]{hyperref}\usepackage{float}
+\usepackage[dvipdfmx]{hyperref}
 \usepackage{fancyhdr}
+\usepackage{caption, floatrow}
 
 \usepackage[dvipdfmx]{graphicx}
 
@@ -17,6 +18,14 @@
   isbn=false
   ]{biblatex}
 \addbibresource{main.bib}
+
+
+\DeclareNewFloatType{graph}{placement=H, name=Graph}
+\floatsetup[graph]{capposition=bottom}
+
+
+% contents below
+% ------------------------------------------------------------------------------
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -35,19 +44,20 @@
 \vspace*{\fill}
 \parbox{\linewidth}{\centering%
 Date of Experiment: January 16, 2019
-\\ Date of Experiment Submission: January --, 2019
+\\ Date of Report Submission: January 30, 2019
 \\ University Preparatory Certificate for Science and Engineering
 }
 \newpage
 
 \section*{Abstract}
-  The aim of this experiment was to confirm the theory behind interference as light reflects off of a reflection grating and measure the wavelength of a Helium-neon (HeNe) laser. The experiment properly confirmed that our theory properly models the observed phenomenon by comparing the measured wavelength with the known wavelength of a HeNe laser, 632.8 nm \autocite{WikiHeNe}. The wavelength measured by the experiment was
+\paragraph{}
+The aim of this experiment was to confirm the theory behind interference as light reflects off of a reflection grating and measure the wavelength of a Helium-neon (HeNe) laser. The experiment properly confirmed that our theory properly models the observed phenomenon by comparing the measured wavelength with the known wavelength of a HeNe laser, 632.8 nm \autocite{WikiHeNe}. The wavelength measured by the experiment was
 
-  $$
-  xxx.xx \pm \Delta xx [nm]
-  $$
+$$
+xxx.xx \pm \Delta xx [nm]
+$$
 
-  In this report, we first introduce the theory of light interference patterns from a reflection grating. Then, we introduce the apparatus used and explain the experiment protocol. This is followed by an analysis of our results. Finally, we will discuss the results and give our conclusion.
+In this report, we first introduce the theory of light interference patterns from a reflection grating. Then, we introduce the apparatus used and explain the experiment protocol. This is followed by an analysis of our results. Finally, we will discuss the results and give our conclusion.
 
 \section{Introduction}
 
@@ -147,7 +157,29 @@ The experimental protocol is described below.
 \section{Measurements and Results}
 \paragraph{}
 
+\begin{table}[h]
+\begin{tabular}{l|l|l|l|}
+\cline{2-4}
+                                  & \textbf{1/50 in. {[}m{]}} & \textbf{1/64 in. {[}m{]}} & \textbf{1/100 in. {[}m{]}} \\ \hline
+\multicolumn{1}{|l|}{\textbf{y0}} & 0.048                     & 0.048                     & 0.031                      \\ \hline
+\multicolumn{1}{|l|}{\textbf{y1}} & 0.053                     & 0.057                     & 0.047                      \\ \hline
+\multicolumn{1}{|l|}{\textbf{y2}} & 0.059                     & 0.064                     & 0.059                      \\ \hline
+\multicolumn{1}{|l|}{\textbf{y3}} & 0.064                     & 0.07                      & 0.069                      \\ \hline
+\multicolumn{1}{|l|}{\textbf{y4}} & 0.069                     & 0.076                     & 0.078                      \\ \hline
+\multicolumn{1}{|l|}{\textbf{y5}} & 0.074                     & 0.082                     & 0.087                      \\ \hline
+\multicolumn{1}{|l|}{\textbf{y6}} & 0.078                     & 0.087                     & 0.094                      \\ \hline
+\multicolumn{1}{|l|}{\textbf{y7}} & 0.082                     & 0.092                     & 0.101                      \\ \hline
+\multicolumn{1}{|l|}{\textbf{y8}} & 0.086                     & 0.096                     & 0.107                      \\ \hline
+\multicolumn{1}{|l|}{\textbf{y9}} & 0.09                      & 0.102                     & 0.114                      \\ \hline
+\end{tabular}
+\caption{Raw measurements of $y_n$ for each division size}
+\label{tb:raw_data}
+\end{table}
 
+\begin{graph}
+  \includegraphics[width=\textwidth]{img/100.pdf}
+  \caption{$y_{n}^{2}$ for each order in 1/100 in. gratings}
+\end{graph}
 
 \section{Analysis of Results}
 aa
