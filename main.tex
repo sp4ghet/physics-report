@@ -51,11 +51,17 @@ Date of Experiment: January 16, 2019
 
 \section*{Abstract}
 \paragraph{}
-The aim of this experiment was to confirm the theory behind interference as light reflects off of a reflection grating and measure the wavelength of a Helium-neon (HeNe) laser. The experiment properly confirmed that our theory properly models the observed phenomenon by comparing the measured wavelength with the known wavelength of a HeNe laser, 632.8 nm \autocite{WikiHeNe}. The wavelength measured by the experiment was
+The aim of this experiment was to confirm the theory behind interference as light reflects off of a reflection grating and measure the wavelength of a Helium-neon (HeNe) laser. The experiment properly confirmed that our theory properly models the observed phenomenon by comparing the measured wavelength with the known wavelength of a HeNe laser, $6.328 \times 10^{-7}$ [m] \autocite{WikiHeNe}. The wavelength measured by the experiment was
 
-$$
-xxx.xx \pm \Delta xx [nm]
-$$
+\begin{table}[H]
+\begin{tabular}{|l|l|}
+\hline
+\textbf{division}  & \textbf{wavelength}                 \\ \hline
+\textbf{1/50 in.}  & $6.82 \pm 0.135 \times 10^{-7}$ [m] \\ \hline
+\textbf{1/64 in.}  & $7.23 \pm 0.175 \times 10^{-7}$ [m] \\ \hline
+\textbf{1/100 in.} & $7.01 \pm 0.115 \times 10^{-7}$ [m] \\ \hline
+\end{tabular}
+\end{table}
 
 In this report, we first introduce the theory of light interference patterns from a reflection grating. Then, we introduce the apparatus used and explain the experiment protocol. This is followed by an analysis of our results. Finally, we will discuss the results and give our conclusion.
 
@@ -217,23 +223,23 @@ The graphs show the following values for $y'$:
 $3.97 \times 10^{-4}$ [m], $2.54 \times 10^{-4}$
 
 $$
-\text{when}~d=\frac{1}{50}~\text{inches:}~6.00 \times 10^{-4}~[\text{m}^2]
+\text{when}~d=\text{1/50 inches:}~6.00 \times 10^{-4}~[\text{m}^2]
 $$
 $$
-\text{when}~d=\frac{1}{64}~\text{inches:}~9.00 \times 10^{-4}~[\text{m}^2]
+\text{when}~d=\text{1/64 inches:}~9.00 \times 10^{-4}~[\text{m}^2]
 $$
 $$
-\text{when}~d=\frac{1}{100}~\text{inches:}~1.30 \times 10^{-3}~[\text{m}^2]
+\text{when}~d=\text{1/100 inches:}~1.30 \times 10^{-3}~[\text{m}^2]
 $$
 applying these values along with $d$ and $x = 4.92 \times 10^{-1}$ [m] to \eqref{eq:lambda}, the following values of $\lambda$ can be derived.
 $$
-\text{when}~d=\frac{1}{50}~\text{inches:}~\cfrac{5.08 \times 10^{-4} * 6.00 \times 10^{-4}}{2*(4.92 \times 10^{-1})^2} = 6.30 * 10^{-7} = \lambda
+\text{when}~d=\text{1/50 inches:}~\cfrac{5.08 \times 10^{-4} * 6.00 \times 10^{-4}}{2*(4.92 \times 10^{-1})^2} = 6.30 * 10^{-7} = \lambda
 $$
 $$
-\text{when}~d=\frac{1}{64}~\text{inches:}~\cfrac{3.97 \times 10^{-4} * 9.00 \times 10^{-4}}{2*(4.92 \times 10^{-1})^2} = 7.38 * 10^{-7} = \lambda
+\text{when}~d=\text{1/64 inches:}~\cfrac{3.97 \times 10^{-4} * 9.00 \times 10^{-4}}{2*(4.92 \times 10^{-1})^2} = 7.38 * 10^{-7} = \lambda
 $$
 $$
-\text{when}~d=\frac{1}{100}~\text{inches:}~\cfrac{2.54 \times 10^{-4} * 1.30 \times 10^{-3}}{2*(4.92 \times 10^{-1})^2} = 6.82 * 10^{-7} = \lambda
+\text{when}~d=\text{1/100 inches:}~\cfrac{2.54 \times 10^{-4} * 1.30 \times 10^{-3}}{2*(4.92 \times 10^{-1})^2} = 6.82 * 10^{-7} = \lambda
 $$
 
 These values are relatively close to the known true wavelength of the HeNe laser, $6.328 \times 10^{-7}$ [m]. However, this calculation does not account for the uncertainty in the measurements.
@@ -276,9 +282,29 @@ It can be seen that the uncertainty is smaller when the division size is smaller
 \paragraph{}
 The main aim of this experiment was to measure the wavelength of the HeNe laser beam experimentally. A subtask was to decide which division size provided the most precise measurement of the wavelength.
 
-The results are summarized in Table \ref{tb:result}.
+The results are summarized in Table \ref{tb:result}, shown below:
 
+\begin{table}[H]
+\begin{tabular}{|l|l|}
+\hline
+\textbf{division}  & \textbf{wavelength}                 \\ \hline
+\textbf{1/50 in.}  & $6.82 \pm 0.135 \times 10^{-7}$ [m] \\ \hline
+\textbf{1/64 in.}  & $7.23 \pm 0.175 \times 10^{-7}$ [m] \\ \hline
+\textbf{1/100 in.} & $7.01 \pm 0.115 \times 10^{-7}$ [m] \\ \hline
+\end{tabular}
+\end{table}
 
+Although the measurements could agree to a wavelength, it has drifted from the known true value of the laser beam's wavelength. There are a few causes that could be attributable to this systematic error.
+
+The first possible cause is that the stand on which the specular ruler was positioned was not completely stable. The ruler did not affect the shape of the interference pattern when the stand happened to move. However, the stand could have been in multiple positions when the measurements of $O$ were taken, or when the measurements of $y_n$ were being taken which would have affected the measurements.
+
+The other possible cause for a systematic error is that point $O$ was not measured exactly as described in the experiment booklet \autocite{UPCSE2018}. In this experiment, point $O$ was measured by taking the actual height of the ruler, whereas in the experiment booklet, it was suggested that point $O$ be specified as the midpoint of $T$ and $S$. This could have resulted in some error to occur between the optical phenomena and the measurements taken.
+
+There was an interesting phenomenon observed in this experiment which was not initially expected by the theory. There were two interference peaks below point $T$ which should not exist according to the theory. Although this disparity could possibly indicate a flaw in how the theory explains the wavelength as well, it is unlikely that is the case as there should be a more significant and noticeable systematic error in that situation.
+
+In the case with 1/100 inch divisions, the two unknown peaks were considered as part of the data. This is the reason why $y_0$ is different only when the division size is 1/100 inches. The main reasons for this decision is because $T$ did not align with any particular peak of the interference pattern. Another reason is that the interference patterns were larger and the interference pattern became unobservably dark too rapidly to calculate 10 data points.
+
+This experiment can be concluded as overall successful although leaving room for alternate interpretation as there are some unexplained phenomena observed and the experimentally measured value for the wavelength of the HeNe laser did not coincide with the known true value of the laser. However, the systematic error is relatively small and the measured wavelength is still within the range of visible red light, so it can be said that the experiment successfully measured the wavelength to certain degree of accuracy.
 
 \printbibliography
 \end{document}
