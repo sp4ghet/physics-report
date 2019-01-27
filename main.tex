@@ -35,7 +35,11 @@
 \rfoot{p. \thepage}
 
 \title{Measurement of the Wavelength of a Helium-neon Laser via Interference Patterns in a Reflection Grating Experiment}
-\author{ Rikuo Hasegawa \\ Tutorial Group: C \\ Lab Pair: Mohammed Alsaleh }
+\author{ Rikuo Hasegawa
+  \\ Tutorial Group: C
+  \\ Lab Group: C2
+  \\ Lab Pair: Mohammed Alsaleh
+  \\ Lab Group Members: Yecan Liu, Hongshuo Chen \\ Renrui Wang, Yubei Liu, Yunan Wang }
 
 \begin{document}
 
@@ -51,7 +55,7 @@ Date of Experiment: January 16, 2019
 
 \section*{Abstract}
 \paragraph{}
-The aim of this experiment was to confirm the theory behind interference as light reflects off of a reflection grating and measure the wavelength of a Helium-neon (HeNe) laser. The experiment properly confirmed that our theory properly models the observed phenomenon by comparing the measured wavelength with the known wavelength of a HeNe laser, $6.328 \times 10^{-7}$ [m] \autocite{WikiHeNe}. The wavelength measured by the experiment was
+The aim of this experiment was to confirm the theory behind interference as light reflects off of a reflection grating and measure the wavelength of a Helium-neon (HeNe) laser. The experiment properly confirmed that our theory most likely models the observed phenomenon by comparing the measured wavelength with the known wavelength of a HeNe laser, $6.328 \times 10^{-7}$ [m] \autocite{WikiHeNe}. The wavelength measured by the experiment was
 
 \begin{table}[H]
 \begin{tabular}{|l|l|}
@@ -223,13 +227,13 @@ The graphs show the following values for $y'$:
 $3.97 \times 10^{-4}$ [m], $2.54 \times 10^{-4}$
 
 $$
-\text{when}~d=\text{1/50 inches:}~6.00 \times 10^{-4}~[\text{m}^2]
+\text{when}~d=\text{1/50 inches:}~6.00 \times 10^{-4}~[\text{m}^2/\text{order}]
 $$
 $$
-\text{when}~d=\text{1/64 inches:}~9.00 \times 10^{-4}~[\text{m}^2]
+\text{when}~d=\text{1/64 inches:}~9.00 \times 10^{-4}~[\text{m}^2/\text{order}]
 $$
 $$
-\text{when}~d=\text{1/100 inches:}~1.30 \times 10^{-3}~[\text{m}^2]
+\text{when}~d=\text{1/100 inches:}~1.30 \times 10^{-3}~[\text{m}^2/\text{order}]
 $$
 applying these values along with $d$ and $x = 4.92 \times 10^{-1}$ [m] to \eqref{eq:lambda}, the following values of $\lambda$ can be derived.
 $$
@@ -250,15 +254,15 @@ In order to calculate the uncertainty, the data is examined using the regression
 \begin{tabular}{|l|l|l|}
 \hline
                & \textbf{Lower 95\%}    & \textbf{Upper 95\%}   \\ \hline
-\textbf{1/50 in.}  & $6.68 \times 10^{-7}$ & $6.95 \times 10^{-7}$ \\ \hline
-\textbf{1/64 in.}  & $7.05 \times 10^{-7}$ & $7.40 \times 10^{-7}$ \\ \hline
-\textbf{1/100 in.} & $6.89 \times 10^{-7}$  & $7.12 \times 10^{-7}$ \\ \hline
+\textbf{1/50 in.}  & $6.68 \times 10^{-7}$ [m] & $6.95 \times 10^{-7}$ [m] \\ \hline
+\textbf{1/64 in.}  & $7.05 \times 10^{-7}$ [m] & $7.40 \times 10^{-7}$ [m] \\ \hline
+\textbf{1/100 in.} & $6.89 \times 10^{-7}$ [m]  & $7.12 \times 10^{-7}$ [m] \\ \hline
 \end{tabular}
 \caption{Lower and upper bounds for measured wavelength within 95\% confidence interval}
 \label{tb:lambda}
 \end{table}
 
-Thus, using \eqref{eq:uncertainty} \autocite{UPCSE2018} for calculating the uncertainty from the upper and lower bound of the gradient, it is possible to express the measured value with uncertainty.
+Thus, using \eqref{eq:uncertainty} \autocite{Palmer} for calculating the uncertainty from the upper and lower bound of the gradient, it is possible to express the measured value with uncertainty.
 
 \begin{equation}\label{eq:uncertainty}
   x \pm \Delta x = \frac{1}{2}(G_{upper} + G_{lower})  \pm \frac{1}{2} (G_{upper} - G_{lower})
@@ -282,7 +286,7 @@ It can be seen that the uncertainty is smaller when the division size is smaller
 \paragraph{}
 The main aim of this experiment was to measure the wavelength of the HeNe laser beam experimentally. A subtask was to decide which division size provided the most precise measurement of the wavelength.
 
-The results are summarized in Table \ref{tb:result}, shown below:
+The results are summarized in Table \ref{tb:result}, also shown below:
 
 \begin{table}[H]
 \begin{tabular}{|l|l|}
