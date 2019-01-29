@@ -39,7 +39,7 @@
   \\ Tutorial Group: C
   \\ Lab Group: C2
   \\ Lab Pair: Mohammed Alsaleh
-  \\ Lab Group Members: Yecan Liu, Hongshuo Chen \\ Renrui Wang, Yubei Liu, Yunan Wang }
+  \\ Lab Partners: Yecan Liu, Hongshuo Chen \\ Renrui Wang, Yubei Liu, Yunan Wang }
 
 \begin{document}
 
@@ -57,15 +57,15 @@ Date of Experiment: January 16, 2019
 \paragraph{}
 The aim of this experiment was to confirm the theory behind interference as light reflects off of a reflection grating and measure the wavelength of a Helium-neon (HeNe) laser. The experiment properly confirmed that our theory most likely models the observed phenomenon by comparing the measured wavelength with the known wavelength of a HeNe laser, $6.328 \times 10^{-7}$ [m] \autocite{WikiHeNe}. The wavelength measured by the experiment was
 
-\begin{table}[H]
-\begin{tabular}{|l|l|}
-\hline
-\textbf{division}  & \textbf{wavelength}                 \\ \hline
-\textbf{1/50 in.}  & $6.82 \pm 0.135 \times 10^{-7}$ [m] \\ \hline
-\textbf{1/64 in.}  & $7.23 \pm 0.175 \times 10^{-7}$ [m] \\ \hline
-\textbf{1/100 in.} & $7.01 \pm 0.115 \times 10^{-7}$ [m] \\ \hline
-\end{tabular}
-\end{table}
+$$
+\text{when division is 1/50  in.:} \quad  6.82 \pm 0.14 \times 10^{-7} \text{[m]}
+$$
+$$
+\text{when division is 1/64  in.:} \quad 7.23 \pm 0.18 \times 10^{-7} \text{[m]}
+$$
+$$
+\text{when division is 1/100  in.:} \quad 7.01 \pm 0.12 \times 10^{-7} \text{[m]}
+$$
 
 In this report, we first introduce the theory of light interference patterns from a reflection grating. Then, we introduce the apparatus used and explain the experiment protocol. This is followed by an analysis of our results. Finally, we will discuss the results and give our conclusion.
 
@@ -224,26 +224,25 @@ The graphs for $y = y_{n}^{2}$ for each respective division size are shown in Gr
 \paragraph{}
 
 The graphs show the following values for $y'$:
-$3.97 \times 10^{-4}$ [m], $2.54 \times 10^{-4}$
 
 $$
-\text{when}~d=\text{1/50 inches:}~6.00 \times 10^{-4}~[\text{m}^2/\text{order}]
+\text{when}~d=\text{1/50 inches:}~6.49 \times 10^{-4}~[\text{m}^2/\text{order}]
 $$
 $$
-\text{when}~d=\text{1/64 inches:}~9.00 \times 10^{-4}~[\text{m}^2/\text{order}]
+\text{when}~d=\text{1/64 inches:}~8.82 \times 10^{-4}~[\text{m}^2/\text{order}]
 $$
 $$
-\text{when}~d=\text{1/100 inches:}~1.30 \times 10^{-3}~[\text{m}^2/\text{order}]
+\text{when}~d=\text{1/100 inches:}~1.34 \times 10^{-3}~[\text{m}^2/\text{order}]
 $$
 applying these values along with $d$ and $x = 4.92 \times 10^{-1}$ [m] to \eqref{eq:lambda}, the following values of $\lambda$ can be derived.
 $$
-\text{when}~d=\text{1/50 inches:}~\cfrac{5.08 \times 10^{-4} * 6.00 \times 10^{-4}}{2*(4.92 \times 10^{-1})^2} = 6.30 * 10^{-7} = \lambda
+\text{when}~d=\text{1/50 inches:}~\cfrac{5.08 \times 10^{-4} * 6.49 \times 10^{-4}}{2*(4.92 \times 10^{-1})^2} = 6.81 * 10^{-7} = \lambda
 $$
 $$
-\text{when}~d=\text{1/64 inches:}~\cfrac{3.97 \times 10^{-4} * 9.00 \times 10^{-4}}{2*(4.92 \times 10^{-1})^2} = 7.38 * 10^{-7} = \lambda
+\text{when}~d=\text{1/64 inches:}~\cfrac{3.97 \times 10^{-4} * 8.82 \times 10^{-4}}{2*(4.92 \times 10^{-1})^2} = 7.23 * 10^{-7} = \lambda
 $$
 $$
-\text{when}~d=\text{1/100 inches:}~\cfrac{2.54 \times 10^{-4} * 1.30 \times 10^{-3}}{2*(4.92 \times 10^{-1})^2} = 6.82 * 10^{-7} = \lambda
+\text{when}~d=\text{1/100 inches:}~\cfrac{2.54 \times 10^{-4} * 1.34 \times 10^{-3}}{2*(4.92 \times 10^{-1})^2} = 7.03 * 10^{-7} = \lambda
 $$
 
 These values are relatively close to the known true wavelength of the HeNe laser, $6.328 \times 10^{-7}$ [m]. However, this calculation does not account for the uncertainty in the measurements.
@@ -265,16 +264,16 @@ In order to calculate the uncertainty, the data is examined using the regression
 Thus, using \eqref{eq:uncertainty} \autocite{Palmer} for calculating the uncertainty from the upper and lower bound of the gradient, it is possible to express the measured value with uncertainty.
 
 \begin{equation}\label{eq:uncertainty}
-  x \pm \Delta x = \frac{1}{2}(G_{upper} + G_{lower})  \pm \frac{1}{2} (G_{upper} - G_{lower})
+  x \pm \Delta x = G_{regression}  \pm \frac{1}{2} (G_{upper} - G_{lower})
 \end{equation}
 
 \begin{table}[H]
 \begin{tabular}{|l|l|}
 \hline
 \textbf{division}  & \textbf{wavelength}                 \\ \hline
-\textbf{1/50 in.}  & $6.82 \pm 0.135 \times 10^{-7}$ [m] \\ \hline
-\textbf{1/64 in.}  & $7.23 \pm 0.175 \times 10^{-7}$ [m] \\ \hline
-\textbf{1/100 in.} & $7.01 \pm 0.115 \times 10^{-7}$ [m] \\ \hline
+\textbf{1/50 in.}  & $6.82 \pm 0.14 \times 10^{-7}$ [m] \\ \hline
+\textbf{1/64 in.}  & $7.23 \pm 0.18 \times 10^{-7}$ [m] \\ \hline
+\textbf{1/100 in.} & $7.01 \pm 0.12 \times 10^{-7}$ [m] \\ \hline
 \end{tabular}
 \caption{Values of the wavelength for each division size with uncertainty}
 \label{tb:result}
@@ -286,19 +285,19 @@ It can be seen that the uncertainty is smaller when the division size is smaller
 \paragraph{}
 The main aim of this experiment was to measure the wavelength of the HeNe laser beam experimentally. A subtask was to decide which division size provided the most precise measurement of the wavelength.
 
-The results are summarized in Table \ref{tb:result}, also shown below:
+The results are summarized in Table \ref{tb:result}, shown below:
 
 \begin{table}[H]
 \begin{tabular}{|l|l|}
 \hline
 \textbf{division}  & \textbf{wavelength}                 \\ \hline
-\textbf{1/50 in.}  & $6.82 \pm 0.135 \times 10^{-7}$ [m] \\ \hline
-\textbf{1/64 in.}  & $7.23 \pm 0.175 \times 10^{-7}$ [m] \\ \hline
-\textbf{1/100 in.} & $7.01 \pm 0.115 \times 10^{-7}$ [m] \\ \hline
+\textbf{1/50 in.}  & $6.82 \pm 0.14 \times 10^{-7}$ [m] \\ \hline
+\textbf{1/64 in.}  & $7.23 \pm 0.18 \times 10^{-7}$ [m] \\ \hline
+\textbf{1/100 in.} & $7.01 \pm 0.12 \times 10^{-7}$ [m] \\ \hline
 \end{tabular}
 \end{table}
 
-Although the measurements could agree to a wavelength, it has drifted from the known true value of the laser beam's wavelength. There are a few causes that could be attributable to this systematic error.
+Although the measurements could not agree to a wavelength, they are reasonably close to overlapping. However, the true value of the HeNe laser's wavelength is not contained in the small range which may have been where the experiments would come to an agreement.  There are a few causes that could be attributable to this systematic error.
 
 The first possible cause is that the stand on which the specular ruler was positioned was not completely stable. The ruler did not affect the shape of the interference pattern when the stand happened to move. However, the stand could have been in multiple positions when the measurements of $O$ were taken, or when the measurements of $y_n$ were being taken which would have affected the measurements.
 
