@@ -8,5 +8,7 @@
 
 dist/*
 !dist/*.pdf
+*/dist/*
+!*/dist/*.pdf
 
 node_modules
